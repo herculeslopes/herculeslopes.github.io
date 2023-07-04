@@ -10,7 +10,7 @@ import mdx from '@mdx-js/rollup'
 //   ],
 // })
 
-export default defineConfig(() => {
+export default defineConfig(({ command }) => {
   const config = {
     plugins: [
       { enforce: 'pre', ...mdx(/* jsxImportSource: …, otherOptions… */) },
