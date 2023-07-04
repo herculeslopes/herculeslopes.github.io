@@ -1,0 +1,25 @@
+[
+    {
+        "slug": "sismob",
+        "imgg": "https://images.ctfassets.net/63bmaubptoky/8e6EHyyhZoA2rEb_gcW_Wqp1UYa-QFOfol6A_hLTDo4/d07539f9788941b43e301c741bc144ce/what-is-software-CA-Capterra-Header.png",
+        "img": "/assets/img/project-sismob5.png",
+        "name": "SISMOB",
+        "organization": "PortosRio",
+        "description": "O SISMOB é um sistema de controle imobiliário.",
+        "platforms": ["web"],
+        "technologies": ["django", "react"],
+        "href": ""
+    },
+    {
+        "slug": "cgeo",
+        "imgg": "https://t.ctcdn.com.br/OwNKkf8MIgwg14QiVDnZnU2BFG4=/1057x595/smart/filters:format(webp)/i611.jpeg",
+        "img": "/assets/img/cgeo.png",
+        "name": "C-Geo",
+        "organization": "PortosRio",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet porta lorem. Vestibulum eu convallis velit. Mauris vulputate pretium libero sit amet tristique. Vivamus dolor metus, mattis sit amet mattis a, aliquet at eros. Duis non aliquet tellus, sit amet tempus velit. Aliquam eleifend mauris vel dictum cursus. Donec a scelerisque augue.",
+        "platforms": ["windows", "linux"],
+        "technologies": ["python"],
+        "href": ""
+    }
+]
+

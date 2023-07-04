@@ -1,0 +1,57 @@
+@mixin background-transition {
+    -webkit-transition: background-color 300ms linear;
+    -ms-transition: background-color 300ms linear;
+    transition: background-color 300ms linear;
+}
+
+@mixin background-fast-transition {
+    -webkit-transition: background-color 100ms linear;
+    -ms-transition: background-color 100ms linear;
+    transition: background-color 100ms linear;
+}
+
+@mixin color-transition {
+    -webkit-transition: color 300ms linear;
+    -ms-transition: color 300ms linear;
+    transition: color 300ms linear;
+}
+
+@mixin color-fast-transition {
+    -webkit-transition: color 100ms linear;
+    -ms-transition: color 100ms linear;
+    transition: color 100ms linear;
+}
+
+
+@mixin font-size-transition {
+    -webkit-transition: font-size 300ms linear;
+    -ms-transition: font-size 300ms linear;
+    transition: font-size 300ms linear;
+}
+
+@mixin font-size-fast-transition {
+    -webkit-transition: font-size 100ms linear;
+    -ms-transition: font-size 100ms linear;
+    transition: font-size 100ms linear;
+}
+
+@mixin size-transition {
+    -webkit-transition: width 300ms linear;
+    -ms-transition: width 300ms linear;
+    transition: width 300ms linear;
+
+    -webkit-transition: height 300ms linear;
+    -ms-transition: height 300ms linear;
+    transition: height 300ms linear;
+}
+
+
+@mixin size-fast-transition {
+    -webkit-transition: width 100ms linear;
+    -ms-transition: width 100ms linear;
+    transition: width 100ms linear;
+
+    -webkit-transition: height 100ms linear;
+    -ms-transition: height 100ms linear;
+    transition: height 100ms linear;
+}
