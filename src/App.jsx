@@ -13,7 +13,7 @@ function App() {
 
   return <>
     <Scrollbars style={{ height: '100vh' }}>
-      <BrowserRouter>
+      <BrowserRouter basename={import.meta.env.DEV ? '/' : '/herculeslopes.github.io/'}>
         <Routes>
           <Route path='' element={<SharedLayout />}>
             <Route index element={<Navigate to='home' />} />
