@@ -20,8 +20,10 @@ export default defineConfig(() => {
   }
 
   if (command !== 'serve') {
-    config.base = '/react-vite-gh-pages/'
+    config.base = '/herculeslopes.github.io/'
   }
+
+  return config;
 })
 
 // if (command !== 'serve') {
