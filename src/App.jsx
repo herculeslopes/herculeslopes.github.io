@@ -1,6 +1,6 @@
 import './App.css'
 
-import { Navigate, BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Navigate, BrowserRouter, HashRouter, Routes, Route } from 'react-router-dom'
 import Home from './Pages/Home'
 // import Slug from './Pages/Slug'
 import SharedLayout from './Layouts/SharedLayout'
@@ -13,7 +13,7 @@ function App() {
 
   return <>
     <Scrollbars style={{ height: '100vh' }}>
-      <BrowserRouter basename={import.meta.env.DEV ? '/' : '/herculeslopes.github.io/'}>
+      <HashRouter>
         <Routes>
           <Route path='' element={<SharedLayout />}>
             <Route index element={<Navigate to='home' />} />
@@ -29,7 +29,7 @@ function App() {
 
           </Route>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </Scrollbars>
   </>
 }
