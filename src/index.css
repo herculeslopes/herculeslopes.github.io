@@ -200,12 +200,7 @@ hr {
   width: fit-content;
 }
 .socials .links a div {
-  -webkit-transition: width 300ms linear;
-  -ms-transition: width 300ms linear;
   transition: width 300ms linear;
-  -webkit-transition: height 300ms linear;
-  -ms-transition: height 300ms linear;
-  transition: height 300ms linear;
   margin: 0;
   padding: 0;
   display: inline;
@@ -213,10 +208,10 @@ hr {
   font-size: 10pt;
   width: 0;
   overflow: hidden;
+  white-space: nowrap;
 }
 .socials .links a:hover div {
-  background-color: white;
-  width: 100px;
+  width: 100%;
 }
 
 /* 
