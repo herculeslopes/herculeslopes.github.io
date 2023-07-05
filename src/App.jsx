@@ -8,6 +8,7 @@ import Roadmap from './Pages/Roadmap'
 import Scrollbars from 'react-custom-scrollbars'
 
 import SISMOB from './Content/SISMOB.mdx'
+import CGeo from './Content/CGeo.mdx'
 
 function App() {
 
@@ -22,10 +23,13 @@ function App() {
 
             <Route path='roadmap' element={<Roadmap />} />
 
-            <Route path='projects'>
-              <Route path='sismob' element={<SISMOB />} />
-              {/* <Route path=':slug' element={<Slug />} /> */}
-            </Route>
+            {/* Projects */}
+            <Route path='sismob' element={<SISMOB />} />
+            <Route path='cgeo' element={<CGeo />} />
+
+            {/* <Route path='projects'>
+              <Route path=':slug' element={<Slug />} />
+            </Route> */}
 
           </Route>
         </Routes>

@@ -117,18 +117,33 @@ p {
   font-weight: normal;
 }
 
-.static-content-wrapper {
+.content {
   margin: auto;
   width: 50%;
   border-radius: 5px;
   padding: 10px;
 }
-.static-content-wrapper p {
+.content h1 {
+  text-align: center;
+  font-size: 3em;
+}
+.content p {
+  font-size: 1.3em;
+  font-weight: 600;
+}
+.content ul li {
   font-weight: 600;
 }
 
 .header {
   display: flex;
+}
+
+a {
+  color: inherit;
+}
+a:visited {
+  color: inherit;
 }
 
 .navbar {
@@ -167,7 +182,41 @@ hr {
 }
 
 .socials {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  width: 100%;
+}
+.socials .links {
   display: flex;
+  flex-flow: column;
+  gap: 5px;
+}
+.socials .links a {
+  display: flex;
+  gap: 10px;
+  font-size: 14pt;
+  width: fit-content;
+}
+.socials .links a div {
+  -webkit-transition: width 300ms linear;
+  -ms-transition: width 300ms linear;
+  transition: width 300ms linear;
+  -webkit-transition: height 300ms linear;
+  -ms-transition: height 300ms linear;
+  transition: height 300ms linear;
+  margin: 0;
+  padding: 0;
+  display: inline;
+  width: fit-content;
+  font-size: 10pt;
+  width: 0;
+  overflow: hidden;
+}
+.socials .links a:hover div {
+  background-color: white;
+  width: 100px;
 }
 
 /* 

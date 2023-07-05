@@ -1,9 +1,22 @@
-import { FaGithub } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const Socials = () => {
   return <>
     <div className="socials">
-      <a href="https://github.com/herculeslopes" target='blank'> <FaGithub /> </a>
+      <div className="links">
+        <a href="https://github.com/herculeslopes" target='blank'>
+          <FaGithub />
+          <div>
+            <span>https://github.com/herculeslopes</span>
+          </div>
+        </a>
+        <a href="https://linkedin.com/in/herculeslopes" target='blank'>
+          <FaLinkedin />
+          <div>
+            <span>https://linkedin.com/in/herculeslopes</span>
+          </div>
+        </a>
+      </div>
     </div>
   </>
 }

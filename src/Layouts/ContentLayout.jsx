@@ -1,6 +1,6 @@
 const ContentLayout = ({ children }) => {
   return <>
-    <div className="static-content-wrapper">
+    <div className="content">
       {children}
     </div>
   </>

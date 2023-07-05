@@ -30,7 +30,7 @@ const Project = (props) => {
   })
 
   return <>
-    <article className="project-card-wrapper" onClick={() => navigate(`/projects/${slug}`)}>
+    <article className="project-card-wrapper" onClick={() => navigate(`/${slug}`)}>
       <div className="project-card">
         <img src={img} alt="" className="img" />
         <div className="info">
