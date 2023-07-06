@@ -139,6 +139,12 @@ p {
   display: flex;
 }
 
+.home {
+  display: flex;
+  flex-flow: column;
+  gap: 15px;
+}
+
 a {
   color: inherit;
 }
@@ -209,6 +215,9 @@ hr {
   width: 0;
   overflow: hidden;
   white-space: nowrap;
+}
+.socials .links a div:hover {
+  color: black;
 }
 .socials .links a:hover div {
   width: 100%;

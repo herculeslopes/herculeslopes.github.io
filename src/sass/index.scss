@@ -97,6 +97,11 @@ p {
     // justify-content: space-between;
 }
 
+.home {
+    display: flex;
+    flex-flow: column;
+    gap: 15px;
+}
 
 a {
     color: inherit;
@@ -148,9 +153,13 @@ a {
 
 hr {
     margin-top: 30px;
+
     width: 30%;
     border: 1px solid #213547;
 }
+
+
+
 
 .socials {
     position: fixed;
@@ -187,6 +196,10 @@ hr {
                 width: 0;
                 overflow: hidden;
                 white-space: nowrap;
+
+                &:hover {
+                    color: black;
+                }
             }
 
             &:hover {

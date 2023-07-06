@@ -6,6 +6,12 @@
         "description": "Inglês fluente"
     },
     {
+        "name": "Python",
+        "category": "Programming Language",
+        "percentage": "70",
+        "description": "Uso avançado"
+    },
+    {
         "name": "React",
         "category": "Javascript Framework",
         "percentage": "50",
