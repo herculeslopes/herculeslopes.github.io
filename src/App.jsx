@@ -4,6 +4,8 @@ import { Navigate, BrowserRouter, HashRouter, Routes, Route } from 'react-router
 import Home from './Pages/Home'
 // import Slug from './Pages/Slug'
 import SharedLayout from './Layouts/SharedLayout'
+import ContentLayout from './Layouts/ContentLayout'
+
 import Roadmap from './Pages/Roadmap'
 import Scrollbars from 'react-custom-scrollbars'
 
@@ -16,7 +18,7 @@ function App() {
     <Scrollbars style={{ height: '100vh' }}>
       <HashRouter>
         <Routes>
-          <Route path='' element={<SharedLayout />}>
+          <Route path='/' element={<SharedLayout />}>
             <Route index element={<Navigate to='home' />} />
             {/* <Route index element={<Home />} /> */}
             <Route path='home' element={<Home />} />
@@ -24,8 +26,10 @@ function App() {
             <Route path='roadmap' element={<Roadmap />} />
 
             {/* Projects */}
-            <Route path='sismob' element={<SISMOB />} />
-            <Route path='cgeo' element={<CGeo />} />
+            <Route element={<ContentLayout />} >
+              <Route path='sismob' element={<SISMOB />} />
+              <Route path='cgeo' element={<CGeo />} />
+            </Route>
 
             {/* <Route path='projects'>
               <Route path=':slug' element={<Slug />} />

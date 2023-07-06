@@ -191,10 +191,42 @@ hr {
 
             &:hover {
                 div {
-
                     width: 100%;
                 }
             }
+        }
+    }
+}
+
+.skills-container {
+    display: flex;
+    flex-flow: wrap;
+    gap: 30px;
+
+    .skill {
+        width: calc((100% - 30px * 5) / 6);
+
+
+        &:hover {
+            .CircularProgressbar-path {
+                transition: stroke 300ms linear;
+                stroke: #005D72 !important;
+            }
+        }
+
+        .CircularProgressbar-path {
+            transition: stroke 100ms linear;
+
+        }
+
+        h1,
+        h2 {
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 28pt;
         }
     }
 }

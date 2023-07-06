@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Inglês",
+        "category": "language",
+        "percentage": "90",
+        "description": "Inglês fluente"
+    },
+    {
+        "name": "React",
+        "category": "Javascript Framework",
+        "percentage": "50",
+        "description": "Criação de Projetos"
+    }
+]

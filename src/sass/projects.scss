@@ -111,25 +111,25 @@
 
     @media screen and (min-width: 70em) {
         .project-card-wrapper {
-            width: calc((100% - 30px * 2) / 2);
+            width: calc((100% - 30px * 1) / 2);
         }
     }
 
     @media screen and (min-width: 140em) {
         .project-card-wrapper {
-            width: calc((100% - 30px * 3) / 3);
+            width: calc((100% - 30px * 2) / 3);
         }
     }
 
     @media screen and (min-width: 160em) {
         .project-card-wrapper {
-            width: calc((100% - 30px * 4) / 4);
+            width: calc((100% - 30px * 3) / 4);
         }
     }
 
     @media screen and (min-width: 240em) {
         .project-card-wrapper {
-            width: calc((100% - 30px * 5) / 5);
+            width: calc((100% - 30px * 4) / 5);
         }
     }
 

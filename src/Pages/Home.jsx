@@ -1,10 +1,8 @@
-import { useState } from "react";
-import Project from "../Components/Project";
+import Projects from "../Containers/Projects";
+import Skills from '../Containers/Skills';
 
-import data from '../data/projects.json';
 
 const Home = () => {
-  const [projects, setProjects] = useState(data);
 
   return <>
     <div className="home">
@@ -15,12 +13,12 @@ const Home = () => {
 
       <hr />
 
-      <section>
-        <h2>PROJETOS</h2>
-        <div className="projects-container">
-          {projects.map(project => <Project {...project} />)}
-        </div>
-      </section>
+      <Projects />
+
+      <hr />
+
+
+      <Skills />
 
       {/* <hr /> */}
 

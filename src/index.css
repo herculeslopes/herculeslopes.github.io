@@ -55,22 +55,22 @@
 }
 @media screen and (min-width: 70em) {
   .projects-container .project-card-wrapper {
-    width: calc((100% - 60px) / 2);
+    width: calc((100% - 30px) / 2);
   }
 }
 @media screen and (min-width: 140em) {
   .projects-container .project-card-wrapper {
-    width: calc((100% - 90px) / 3);
+    width: calc((100% - 60px) / 3);
   }
 }
 @media screen and (min-width: 160em) {
   .projects-container .project-card-wrapper {
-    width: calc((100% - 120px) / 4);
+    width: calc((100% - 90px) / 4);
   }
 }
 @media screen and (min-width: 240em) {
   .projects-container .project-card-wrapper {
-    width: calc((100% - 150px) / 5);
+    width: calc((100% - 120px) / 5);
   }
 }
 
@@ -212,6 +212,30 @@ hr {
 }
 .socials .links a:hover div {
   width: 100%;
+}
+
+.skills-container {
+  display: flex;
+  flex-flow: wrap;
+  gap: 30px;
+}
+.skills-container .skill {
+  width: calc((100% - 150px) / 6);
+}
+.skills-container .skill:hover .CircularProgressbar-path {
+  transition: stroke 300ms linear;
+  stroke: #005D72 !important;
+}
+.skills-container .skill .CircularProgressbar-path {
+  transition: stroke 100ms linear;
+}
+.skills-container .skill h1,
+.skills-container .skill h2 {
+  margin: 0;
+  padding: 0;
+}
+.skills-container .skill h1 {
+  font-size: 28pt;
 }
 
 /* 
