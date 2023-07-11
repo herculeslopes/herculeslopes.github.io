@@ -17,7 +17,7 @@ const Skill = (props) => {
 
       })} /> */}
 
-      <CircularProgressbarWithChildren value={percentage} styles={buildStyles({
+      <CircularProgressbarWithChildren strokeWidth={3} value={percentage} styles={buildStyles({
         textColor: '#213547',
         pathColor: '#213547',
         trailColor: 'rgba(0, 0, 0, 0)',
