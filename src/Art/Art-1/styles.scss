@@ -1,0 +1,78 @@
+$BLUE: #00419b;
+$AQUA: #38aeb8;
+
+.art-1 {
+    .circular-frame {
+        display: flex;
+        flex-flow: column;
+
+        height: 600px;
+        width: 600px;
+
+        border-radius: 50%;
+
+        background-color: $AQUA;
+
+        .sky {
+            display: flex;
+            margin: auto 0;
+
+            width: 90%;
+            height: 90%;
+            background-color: white;
+
+
+
+            border-radius: 50%;
+
+            .boat {
+                margin: auto;
+
+                .accomodation {
+                    // width: 40px;
+                    // height: 40px;
+
+
+
+                    .windows {
+                        display: grid;
+                        grid-template-columns: repeat(4, 20px);
+                        grid-template-rows: repeat(3, 20px);
+                        gap: 5px;
+
+
+                        .window {
+
+                            // width: 30px;
+                            // height: 30px;
+
+                            // background-color: $BLUE;
+
+                            &:nth-child(even) {
+                                background-color: $BLUE;
+                            }
+                            
+                            &:nth-child(odd) {
+                                background-color: $AQUA;
+                            }
+                            
+                            &:nth-child(1) {
+                                grid-column-start: 2;
+                            }
+                        }
+                    }
+                }
+
+                .hull {
+                    width: 400px;
+                    height: 40px;
+                    background-color: #224fa2;
+
+                    // border-top: 5px solid white;
+                    // border-bottom: 5px solid white;
+                }
+            }
+        }
+    }
+
+}

@@ -16,5 +16,11 @@
         "category": "Javascript Framework",
         "percentage": "60",
         "description": "Criação de Projetos"
+    },
+    {
+        "name": "Django",
+        "category": "WEB Framework",
+        "percentage": "60",
+        "description": "Criação de Projetos"
     }
 ]

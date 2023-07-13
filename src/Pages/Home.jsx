@@ -1,3 +1,4 @@
+import Experience from '../Components/Experience';
 import Presentation from '../Components/Presentation';
 import Projects from "../Containers/Projects";
 import Skills from '../Containers/Skills';
@@ -29,6 +30,7 @@ const Home = () => {
         <Presentation />,
         <Projects />,
         <Skills />,
+        <Experience />,
       )}
       {/* <hr /> */}
 

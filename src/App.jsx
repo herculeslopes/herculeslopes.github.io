@@ -12,6 +12,8 @@ import Scrollbars from 'react-custom-scrollbars'
 import SISMOB from './Content/SISMOB.mdx'
 import CGeo from './Content/CGeo.mdx'
 
+import Art1 from './Art/Art-1'
+
 function App() {
 
   return <>
@@ -29,6 +31,10 @@ function App() {
             <Route element={<ContentLayout />} >
               <Route path='sismob' element={<SISMOB />} />
               <Route path='cgeo' element={<CGeo />} />
+            </Route>
+
+            <Route path='css-art'>
+              <Route path='art-1' element={<Art1 />} />
             </Route>
 
             {/* <Route path='projects'>

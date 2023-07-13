@@ -244,6 +244,29 @@ hr {
     }
 }
 
+main.canvas-wrapper {
+    display: flex;
+    
+    width: 50%;
+    height: 100%;
+    margin: auto;
+
+    .canvas {
+        display: flex;
+        background-color: white;
+
+        width: 700px;
+        height: 700px;
+
+        margin: auto;
+
+        .art {
+            margin: auto;
+
+        }
+    }
+}
+
 /* 
   :root {
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
