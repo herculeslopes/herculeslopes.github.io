@@ -2,13 +2,23 @@ import './styles.scss';
 
 const Fan = () => {
   return <>
-    <div className="fan">
-      <div className="blades">
-        <div className="blade"></div>
-      </div>
-      <div className="core">
-        <div className="logo">
-          <h3>GALAX</h3>
+    <div className="fan-wrapper">
+      <div className="fan">
+        <div className="blades">
+          <div className="blade"></div>
+          <div className="blade"></div>
+          <div className="blade"></div>
+          <div className="blade"></div>
+          <div className="blade"></div>
+          <div className="blade"></div>
+          <div className="blade"></div>
+          <div className="blade"></div>
+          <div className="blade"></div>
+        </div>
+        <div className="core">
+          <div className="logo">
+            <h3>GTX</h3>
+          </div>
         </div>
       </div>
     </div>
