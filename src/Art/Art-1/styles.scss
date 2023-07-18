@@ -2,7 +2,11 @@ $BLUE: #00419b;
 $AQUA: #38aeb8;
 
 .art-1 {
+    display: flex;
+    
     .circular-frame {
+        margin: auto;
+        
         display: flex;
         flex-flow: column;
 
@@ -53,6 +57,7 @@ $AQUA: #38aeb8;
 
                 z-index: 1;
 
+                
                 .accomodation {
                     display: flex;
                     margin: auto;
@@ -277,11 +282,6 @@ $AQUA: #38aeb8;
                     transform: rotate(360deg);
                 }
             }
-
-
-
-
-
 
 
             .semi-circle {
