@@ -1,9 +1,10 @@
+import { useState } from 'react';
 import './styles.scss';
 
-const Fan = () => {
+const Fan = ({ speed }) => {
   return <>
     <div className="fan-wrapper">
-      <div className="fan">
+      <div className="fan" style={{ animation: `spin ${speed}s linear infinite` }}>
         <div className="blades">
           <div className="blade"></div>
           <div className="blade"></div>
@@ -26,6 +27,8 @@ const Fan = () => {
 }
 
 const Art = () => {
+  const [speed, setSpeed] = useState(0);
+
   return <>
     <div className="art art-3">
       <div className="gtx1650">
@@ -33,8 +36,8 @@ const Art = () => {
         </div>
         <div className='body-wrapper'>
           <div className="body">
-            <Fan />
-            <Fan />
+            <Fan speed={speed} />
+            <Fan speed={speed} />
           </div>
           <div className="connectors">
             <div className="connector tiny"></div>
@@ -45,6 +48,7 @@ const Art = () => {
         </div>
       </div>
     </div>
+    <input style={{ position: 'absolute'}} type="number" value={speed} onChange={(e) => setSpeed(e.target.value)} />
   </>
 }
 
