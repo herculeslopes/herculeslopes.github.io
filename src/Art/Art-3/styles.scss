@@ -2,6 +2,7 @@ $PLASTIC_COLOR: #242424;
 
 .art-3 {
     display: flex;
+    position: relative;
 
     .gtx1650 {
         display: flex;
@@ -87,12 +88,12 @@ $PLASTIC_COLOR: #242424;
                                 // transform-origin: 100% 100%;
                                 transform-origin: 0 0;
 
-                                
+
                                 // transform: translateY(-50%) translateX(-50%);
 
                                 border-bottom-left-radius: 100%;
                                 border-top-left-radius: 100%;
-                                
+
 
                                 margin-left: auto;
                                 margin-right: auto;
@@ -100,7 +101,7 @@ $PLASTIC_COLOR: #242424;
                                 // background-color: black;
 
                                 background-image: linear-gradient(to right, white, #242424 40%);
-                                
+
                                 // transform: rotate(0) translateX(-50%) translateY(-50%);
                                 // transform: rotate(-40deg * index('.blade', &));
 
@@ -205,6 +206,26 @@ $PLASTIC_COLOR: #242424;
                     }
                 }
             }
+        }
+    }
+
+    .slider {
+        position: absolute;
+
+        bottom: 10%;
+        left: 50%;
+
+        transform: translateX(-50%);
+        width: 40%;
+
+        // background-color: green;
+
+        span {
+
+        }
+        
+        input {
+            width: 80%;
         }
     }
 }

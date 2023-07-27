@@ -27,7 +27,7 @@ const Fan = ({ speed }) => {
 }
 
 const Art = () => {
-  const [speed, setSpeed] = useState(0);
+  const [speed, setSpeed] = useState(5);
 
   return <>
     <div className="art art-3">
@@ -47,8 +47,14 @@ const Art = () => {
           </div>
         </div>
       </div>
+
+      <div className="slider">
+        <span>{speed}s</span>
+        <input className='slider' type="range" min='0' max='10' step='.1' value={speed} onChange={(e) => setSpeed(e.target.value)} />
+      </div>
     </div>
-    <input style={{ position: 'absolute'}} type="number" value={speed} onChange={(e) => setSpeed(e.target.value)} />
+
+    {/* <input style={{ position: 'absolute'}} type="number" value={speed} onChange={(e) => setSpeed(e.target.value)} /> */}
   </>
 }
 
