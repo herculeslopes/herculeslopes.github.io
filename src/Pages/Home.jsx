@@ -3,6 +3,8 @@ import Presentation from '../Components/Presentation';
 import Projects from "../Containers/Projects";
 import Skills from '../Containers/Skills';
 
+import SectionDivider from '../Containers/SectionDivider';
+
 
 const Home = () => {
 
@@ -37,6 +39,12 @@ const Home = () => {
       {/* <section>
         <h2>HABILIDADES</h2>
       </section> */}
+      {/* <SectionDivider>
+        <Presentation />
+        <Projects />
+        <Skills />
+        <Experience />
+      </SectionDivider> */}
     </div>
   </>
 }
