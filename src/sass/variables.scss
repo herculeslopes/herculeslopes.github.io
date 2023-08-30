@@ -38,20 +38,20 @@
 @mixin size-transition {
     -webkit-transition: width 300ms linear;
     -ms-transition: width 300ms linear;
-    transition: width 300ms linear;
+    transition: width 300ms linear, height 300ms linear;
 
-    -webkit-transition: height 300ms linear;
-    -ms-transition: height 300ms linear;
-    transition: height 300ms linear;
+    // -webkit-transition: height 300ms linear;
+    // -ms-transition: height 300ms linear;
+    // transition: height 300ms linear;
 }
 
 
 @mixin size-fast-transition {
     -webkit-transition: width 100ms linear;
     -ms-transition: width 100ms linear;
-    transition: width 100ms linear;
+    transition: width 100ms linear, height 100ms linear;
 
-    -webkit-transition: height 100ms linear;
-    -ms-transition: height 100ms linear;
-    transition: height 100ms linear;
+    // -webkit-transition: height 100ms linear;
+    // -ms-transition: height 100ms linear;
+    // transition: height 100ms linear;
 }
