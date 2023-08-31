@@ -2,7 +2,7 @@ import experience from '@/data/experience.json';
 
 const Experience = () => {
   return <>
-    <section className='experience'>
+    <section id='experiencia' className='experience'>
       <h2>EXPERIÊNCIA</h2>
 
       <div className="experencie-container">

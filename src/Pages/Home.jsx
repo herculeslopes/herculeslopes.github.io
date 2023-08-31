@@ -28,12 +28,12 @@ const Home = () => {
       <hr />
       <Skills /> */}
 
-      {divideSections(
+      {/* {divideSections( */}
         <Presentation />,
         <Projects />,
         <Skills />,
         <Experience />,
-      )}
+      {/* )} */}
       {/* <hr /> */}
 
       {/* <section>
