@@ -16,7 +16,7 @@
         "img": "/assets/img/cgeo.png",
         "name": "C-Geo",
         "organization": "PortosRio",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet porta lorem. Vestibulum eu convallis velit. Mauris vulputate pretium libero sit amet tristique. Vivamus dolor metus, mattis sit amet mattis a, aliquet at eros. Duis non aliquet tellus, sit amet tempus velit. Aliquam eleifend mauris vel dictum cursus. Donec a scelerisque augue.",
+        "description": "O programa em Python automatiza o dimensionamento de peças estruturais, simplificando a determinação das propriedades geométricas para estudantes e profissionais de engenharia.",
         "platforms": ["windows", "linux"],
         "technologies": ["python"],
         "href": ""
