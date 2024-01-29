@@ -1,8 +1,10 @@
 [
     {
-        "cargo": "Estagiário",
+        "job": "Estágio de TI",
         "organization": "PortosRio",
-        "data_inicio": "07/2022",
-        "data_fim": "atual"
+        "date_start": "07/2022",
+        "date_end": "atual",
+        "org_icon": "/assets/icons/portosrio-logomarca.jpg",
+        "description": "Essa é a minha primeira experiência profissional. Aqui trabalhei com testes e desenvolvimento de sistemas, e apoio nos processos de informática no porto do Rio de Janeiro."
     }
 ]
