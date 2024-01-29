@@ -13,9 +13,8 @@ const StyledExperience = styled.section`
     display: grid;
     padding: 25px;
     grid-template-columns: 1fr 3px 1fr;
-    color: white;
     
-
+    
     .period {
       margin: 0 50px 50px 50px;
       
@@ -23,11 +22,11 @@ const StyledExperience = styled.section`
         text-align: right;
       }
     }
-
+    
     .middle {
       position: relative;
       background-color: white;
-
+      
       .company-logo {
         position: absolute;
         top: 0;
@@ -43,6 +42,7 @@ const StyledExperience = styled.section`
     .description {
       margin: 0 50px 50px 50px;
       padding: 0 1.5em;
+      color: white;
       
       min-height: 200px;
       background-color: rgba(0, 0, 0, 0.2);
@@ -62,12 +62,13 @@ const Experience = () => {
       <div className='timeline'>
 
         {experience.map((exp, index) => <>
-          {index % 2 == 0 ? <Period period={`${exp.date_start} - ${exp.date_end}`} position=' left' /> : <Description description={exp.description} />}
+          {index % 2 == 0 ? <Description description={exp.description} /> : <Period period={`${exp.date_start} - ${exp.date_end}`} position=' left' />}
 
           <div className="middle">
             <img src={exp.org_icon} alt="" className="company-logo" />
           </div>
-          {index % 2 == 0 ? <Description description={exp.description} /> : <Period period={`${exp.date_start} - ${exp.date_end}`} position=' right' />}
+
+          {index % 2 == 0 ? <Period period={`${exp.date_start} - ${exp.date_end}`} position=' right' /> : <Description description={exp.description} />}
         </>)}
 
 
