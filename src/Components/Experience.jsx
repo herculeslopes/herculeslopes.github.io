@@ -97,14 +97,4 @@ const Description = ({ description }) => {
   </>
 }
 
-// ,
-//     {
-//         "job": "Estagiário",
-//         "organization": "PortosRio",
-//         "date_start": "07/2022",
-//         "date_end": "atual",
-//         "org_icon": "/assets/icons/portosrio-logomarca.jpg"
-//     }
-
-
 export default Experience;

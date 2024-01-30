@@ -8,18 +8,24 @@
     {
         "name": "Python",
         "category": "Programming Language",
-        "percentage": "70",
+        "percentage": "80",
         "description": "Uso avançado"
     },
     {
         "name": "React",
         "category": "Javascript Framework",
-        "percentage": "60",
+        "percentage": "70",
         "description": "Criação de Projetos"
     },
     {
         "name": "Django",
         "category": "WEB Framework",
+        "percentage": "70",
+        "description": "Criação de Projetos"
+    },
+    {
+        "name": "Git e Github",
+        "category": "Development Tool",
         "percentage": "60",
         "description": "Criação de Projetos"
     }
