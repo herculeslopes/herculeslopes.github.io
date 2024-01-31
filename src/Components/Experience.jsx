@@ -42,9 +42,9 @@ const StyledExperience = styled.section`
       color: white;
       
       min-height: 200px;
-      background-color: rgba(0, 0, 0, 0.2);
       border-radius: 5px;
-
+      background-color: rgba(0, 0, 0, 0.2);
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
     
   }

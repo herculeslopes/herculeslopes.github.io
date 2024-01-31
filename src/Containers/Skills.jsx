@@ -43,7 +43,8 @@ const StyledSkills = styled.section`
 `
 
 const Skills = () => {
-  const [skills, setSkills] = useState(data.map(item => ({ ...item, percentage: item.percentage, percentageMax: item.percentage, percentageFull: false })));
+  const [skills, setSkills] = useState(data);
+  // const [skills, setSkills] = useState(data.map(item => ({ ...item, percentage: item.percentage, percentageMax: item.percentage, percentageFull: false })));
   // const [skills, setSkills] = useState(data.map(item => ({ ...item, percentage: 0, percentageMax: item.percentage, percentageFull: false })));
 
   const [count, setCount] = useState(0);
@@ -73,7 +74,7 @@ const Skills = () => {
   //       })
   //     )
 
-  //   }, 1000);
+  //   }, 10);
 
 
   //   return () => {
@@ -85,8 +86,8 @@ const Skills = () => {
   return <>
     <StyledSkills>
       {/* {count} */}
+      {/* <button onClick={() => setIsDone(!isDone)}>{isDone ? 'done' : 'not done'}</button> */}
       <h2>HABILIDADES</h2>
-      <button onClick={() => setIsDone(!isDone)}>{isDone ? 'done' : 'not done'}</button>
       <div className="skill-list">
         {/* {skills.map(skill => <Skill {...skill} />)} */}
         {skills.map(skill => <>
