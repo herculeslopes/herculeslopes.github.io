@@ -3,50 +3,23 @@ import Presentation from '../Components/Presentation';
 import Projects from "../Containers/Projects";
 import Skills from '../Containers/Skills';
 
-import SectionDivider from '../Containers/SectionDivider';
+import Education from '../Components/Education';
+import styled from 'styled-components';
 
+const StyledHome = styled.main`
+  padding-bottom: 20px;
+`
 
 const Home = () => {
+  return <StyledHome className='home'>
 
-  const divideSections = (...sections) => {
-    return sections.reduce((acc, current, index) => {
-      if (index !== sections.length - 1) {
-        acc.push(current, <hr />)
-      } else {
-        acc.push(current)
-      }
-      return acc;
-    }, []);
+    <Presentation />
+    <Projects />
+    <Skills />
+    <Experience />
+    {/* <Education /> */}
 
-  }
-
-  return <>
-    <div className="home">
-      {/* <Presentation />
-      <hr />
-      <Projects />
-      <hr />
-      <Skills /> */}
-
-      {/* {divideSections( */}
-        <Presentation />,
-        <Projects />,
-        <Skills />,
-        <Experience />,
-      {/* )} */}
-      {/* <hr /> */}
-
-      {/* <section>
-        <h2>HABILIDADES</h2>
-      </section> */}
-      {/* <SectionDivider>
-        <Presentation />
-        <Projects />
-        <Skills />
-        <Experience />
-      </SectionDivider> */}
-    </div>
-  </>
+  </StyledHome>
 }
 
 export default Home;

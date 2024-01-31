@@ -2,9 +2,6 @@ import experience from '@/data/experience.json';
 import { version } from 'react';
 import styled from 'styled-components';
 
-
-
-
 const StyledExperience = styled.section`
   display: flex;
   flex-flow: column;
@@ -55,6 +52,7 @@ const StyledExperience = styled.section`
 `
 
 const Experience = () => {
+  
   return <>
     <StyledExperience>
       <h2>EXPERIÊNCIA</h2>
@@ -62,13 +60,13 @@ const Experience = () => {
       <div className='timeline'>
 
         {experience.map((exp, index) => <>
-          {index % 2 == 0 ? <Description description={exp.description} /> : <Period period={`${exp.date_start} - ${exp.date_end}`} position=' left' />}
+          {index % 2 == 0 ? <Description organization={exp.organization} description={exp.description} /> : <Period period={`${exp.date_start} - ${exp.date_end}`} position=' left' />}
 
           <div className="middle">
             <img src={exp.org_icon} alt="" className="company-logo" />
           </div>
 
-          {index % 2 == 0 ? <Period period={`${exp.date_start} - ${exp.date_end}`} position=' right' /> : <Description description={exp.description} />}
+          {index % 2 == 0 ? <Period period={`${exp.date_start} - ${exp.date_end}`} position=' right' /> : <Description organization={exp.organization} description={exp.description} />}
         </>)}
 
 
@@ -86,10 +84,10 @@ const Period = ({ period, position }) => {
   </>
 }
 
-const Description = ({ description }) => {
+const Description = ({ organization, description }) => {
   return <>
     <div className="description">
-      <h3>PortosRio</h3>
+      <h3>{organization}</h3>
       <p>
         {description}
       </p>
