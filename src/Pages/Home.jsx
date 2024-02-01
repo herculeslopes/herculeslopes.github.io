@@ -5,6 +5,7 @@ import Skills from '../Containers/Skills';
 
 import Education from '../Components/Education';
 import styled from 'styled-components';
+import Courses from '../Components/Courses';
 
 const StyledHome = styled.main`
   padding-bottom: 20px;
@@ -18,6 +19,7 @@ const Home = () => {
     <Skills />
     <Experience />
     {/* <Education /> */}
+    {/* <Courses /> */}
 
   </StyledHome>
 }
