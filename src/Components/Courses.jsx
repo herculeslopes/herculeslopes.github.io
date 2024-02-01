@@ -1,4 +1,6 @@
-const StyledCourses = styled.section`
+import styled from "styled-components";
+
+const StyledCourses = styledsection`
   
 `
 
