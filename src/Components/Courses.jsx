@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledCourses = styledsection`
+const StyledCourses = styled.section`
   
 `
 
