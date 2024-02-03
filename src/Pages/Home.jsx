@@ -19,7 +19,7 @@ const Home = () => {
     <Skills />
     <Experience />
     {/* <Education /> */}
-    {/* <Courses /> */}
+    <Courses />
 
   </StyledHome>
 }
