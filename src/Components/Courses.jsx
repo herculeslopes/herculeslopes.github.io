@@ -77,8 +77,16 @@ const StyledCourses = styled.section`
   }
 
   .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     /* height: 300px;
     width: 400px; */
+    width: 100%;
+    /* height: 100%; */
+    /* height: 100px; */
+    aspect-ratio: 1/.7;
+    /* background-color: blue; */
     border-radius: 5px;
     
     cursor: pointer;
@@ -97,15 +105,27 @@ const StyledCourses = styled.section`
 
       transform: translate(-50%, -50%);
       box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
     
-    img {
-      height: 100%;
+    &:not(.isFull) img {
+      /* height: 50%; */
+      /* width: 80%; */
       width: 100%;
 
       object-fit: cover;
-      transition: width linear 1s, height linear 1s;
+      transition: width linear .1s, height linear .1s;
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      border-radius: 5px;
+      aspect-ratio: 1/.7;
+
+      &:hover {
+        width: 90%;
+      }
     }
     
   }
