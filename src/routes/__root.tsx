@@ -9,7 +9,7 @@ import appCss from '../styles.css?url'
 import { site } from '../site'
 import { themeBootScript } from '../theme'
 import { ThemeProvider } from '../components/theme-provider'
-import { Header } from '../components/header'
+import { SectionNav } from '../components/section-nav'
 
 const title = `${site.name} — Desenvolvedor`
 const description =
@@ -60,8 +60,10 @@ function RootComponent() {
       <a className="skip" href="#conteudo">
         Ir para o conteúdo
       </a>
-      <Header />
-      <Outlet />
+      <SectionNav />
+      <div className="shell">
+        <Outlet />
+      </div>
     </ThemeProvider>
   )
 }
@@ -69,7 +71,6 @@ function RootComponent() {
 function NotFound() {
   return (
     <main id="conteudo" className="wrap not-found">
-      <p className="kicker">404</p>
       <h1>Página não encontrada</h1>
       <p>Esse endereço não faz parte do portfólio.</p>
       <a href="/">Voltar ao início</a>

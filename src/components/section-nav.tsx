@@ -2,8 +2,9 @@ import { useEffect, useState } from 'react'
 import { nav } from '../site'
 import { ThemeToggle } from './theme-provider'
 
-export function Header() {
+export function SectionNav() {
   const [active, setActive] = useState<(typeof nav)[number]['id']>('topo')
+  const [progress, setProgress] = useState(0)
 
   useEffect(() => {
     const ids = nav.map((item) => item.id)
@@ -11,8 +12,9 @@ export function Header() {
 
     const update = () => {
       frame = 0
-      const header = document.querySelector('.site-header')
-      const line = (header?.getBoundingClientRect().bottom ?? 72) + 40
+      const max = document.documentElement.scrollHeight - window.innerHeight
+      setProgress(max <= 0 ? 0 : Math.min(1, Math.max(0, window.scrollY / max)))
+
       const atBottom =
         window.innerHeight + window.scrollY >=
         document.documentElement.scrollHeight - 4
@@ -22,6 +24,7 @@ export function Header() {
         return
       }
 
+      const line = Math.min(window.innerHeight * 0.28, 140)
       let current: (typeof ids)[number] = ids[0] ?? 'topo'
       for (const id of ids) {
         const el = document.getElementById(id)
@@ -50,25 +53,25 @@ export function Header() {
   }, [])
 
   return (
-    <header className="site-header">
-      <div className="brand-bar" />
-      <div className="wrap bar">
-        <a className="mark" href="/#topo" aria-label="Início">
-          HL
-        </a>
-        <nav className="nav" aria-label="Seções">
+    <nav className="rail" aria-label="Seções">
+      <div className="rail-group">
+        <div className="rail-track" aria-hidden="true">
+          <span style={{ height: `${progress * 100}%` }} />
+        </div>
+        <ul className="rail-links">
           {nav.map((item) => (
-            <a
-              key={item.id}
-              href={`/#${item.id}`}
-              aria-current={active === item.id ? 'true' : undefined}
-            >
-              {item.label}
-            </a>
+            <li key={item.id}>
+              <a
+                href={`/#${item.id}`}
+                aria-current={active === item.id ? 'true' : undefined}
+              >
+                {item.label}
+              </a>
+            </li>
           ))}
-        </nav>
-        <ThemeToggle />
+        </ul>
       </div>
-    </header>
+      <ThemeToggle />
+    </nav>
   )
 }

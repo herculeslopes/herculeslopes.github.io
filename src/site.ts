@@ -5,7 +5,7 @@
  */
 export const site = {
   name: 'Hércules Lopes',
-  role: 'Desenvolvedor full-stack',
+  role: 'Desenvolvedor full stack',
   locale: 'pt-BR',
   email: 'contato@herculeslopes.com',
   location: 'Rio de Janeiro, RJ',

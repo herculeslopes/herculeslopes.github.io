@@ -5,7 +5,7 @@ export const THEME_STORAGE_KEY = 'theme'
 
 /** Keep these in sync with the palette in src/styles.css */
 export const themeBackground: Record<Theme, string> = {
-  light: '#F4F3EF',
+  light: '#FFFFFF',
   dark: '#101210',
 }
 

@@ -69,6 +69,23 @@ function ProjectCard({
   )
 }
 
+function Portrait() {
+  return (
+    <div className="portrait">
+      <svg
+        className="portrait-svg"
+        viewBox="0 0 280 360"
+        role="img"
+        aria-label="Ilustração provisória no lugar da foto"
+      >
+        <rect className="mint-fill" width="14" height="360" />
+        <circle cx="162" cy="124" r="48" fill="currentColor" />
+        <path d="M68 360h176l-36-132H104L68 360z" fill="currentColor" />
+      </svg>
+    </div>
+  )
+}
+
 function Home() {
   const reduce = useReducedMotion()
 
@@ -77,43 +94,31 @@ function Home() {
       <main id="conteudo">
         <section className="hero" id="topo" aria-labelledby="hero-title">
           <div className="wrap hero-grid">
-            <div>
-              <p className="kicker">Texto provisório</p>
+            <div className="hero-copy">
               <motion.h1
                 id="hero-title"
                 initial={reduce ? false : { opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: reduce ? 0 : 0.35, ease: 'easeOut' }}
               >
-                <span className="line">Hércules</span>
-                <span className="line mark-word">Lopes</span>
+                <span className="name">{site.name}</span>
+                <span className="role">
+                  Desenvolvedor <span className="mark-word">full stack</span>
+                </span>
               </motion.h1>
-              <p className="role">{site.role}</p>
               <p className="lede">Sites e sistemas, do começo ao fim.</p>
               <p className="hero-meta">
                 <span>{site.location}</span>
               </p>
             </div>
-            <div
-              className="photo"
-              role="img"
-              aria-label="Espaço reservado para a foto de Hércules Lopes"
-            >
-              <span className="photo-kicker">Foto</span>
-              <span className="photo-note">Espaço reservado</span>
-            </div>
+            <Portrait />
           </div>
         </section>
 
         <section className="section" id="sobre" aria-labelledby="sobre-title">
           <div className="wrap">
             <Reveal>
-              <div className="section-head">
-                <span className="index" aria-hidden="true">
-                  01
-                </span>
-                <h2 id="sobre-title">Sobre</h2>
-              </div>
+              <h2 id="sobre-title">Sobre</h2>
               <div className="prose">
                 <p>
                   Sou desenvolvedor full-stack e atuo em todo o ciclo de vida do
@@ -128,12 +133,7 @@ function Home() {
         <section className="section" id="trabalho" aria-labelledby="trabalho-title">
           <div className="wrap">
             <Reveal>
-              <div className="section-head">
-                <span className="index" aria-hidden="true">
-                  02
-                </span>
-                <h2 id="trabalho-title">O que eu construo</h2>
-              </div>
+              <h2 id="trabalho-title">O que eu construo</h2>
               <div className="prose">
                 <p>Sites e soluções, do início ao fim — não uma lista de cursos.</p>
                 <p className="note">Posicionamento provisório.</p>
@@ -153,12 +153,7 @@ function Home() {
         <section className="section" id="projetos" aria-labelledby="projetos-title">
           <div className="wrap">
             <Reveal>
-              <div className="section-head">
-                <span className="index" aria-hidden="true">
-                  03
-                </span>
-                <h2 id="projetos-title">Projetos</h2>
-              </div>
+              <h2 id="projetos-title">Projetos</h2>
               <ul className="project-grid">
                 {projects.map((project) => (
                   <li key={project.name}>
@@ -173,12 +168,7 @@ function Home() {
         <section className="section" id="contato" aria-labelledby="contato-title">
           <div className="wrap">
             <Reveal>
-              <div className="section-head">
-                <span className="index" aria-hidden="true">
-                  04
-                </span>
-                <h2 id="contato-title">Contato</h2>
-              </div>
+              <h2 id="contato-title">Contato</h2>
               <div className="contact-block">
                 <p>Para um projeto ou uma conversa.</p>
                 <a className="email" href={`mailto:${site.email}`}>
