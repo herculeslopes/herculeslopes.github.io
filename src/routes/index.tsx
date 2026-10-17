@@ -39,19 +39,9 @@ const projects = [
   },
 ]
 
-function ProjectCard({
-  project,
-  reduce,
-}: {
-  project: (typeof projects)[number]
-  reduce: boolean | null
-}) {
+function ProjectCard({ project }: { project: (typeof projects)[number] }) {
   return (
-    <motion.article
-      className={project.placeholder ? 'card card-empty' : 'card'}
-      whileHover={reduce ? undefined : { y: -2 }}
-      transition={{ duration: 0.18, ease: 'easeOut' }}
-    >
+    <article className="card">
       <p className="meta">{project.meta}</p>
       <h3>{project.name}</h3>
       <p>{project.text}</p>
@@ -65,7 +55,7 @@ function ProjectCard({
           ))}
         </ul>
       ) : null}
-    </motion.article>
+    </article>
   )
 }
 
@@ -103,7 +93,13 @@ function Home() {
               >
                 <span className="name">{site.name}</span>
                 <span className="role">
-                  Desenvolvedor <span className="mark-word">full stack</span>
+                  Desenvolvedor{' '}
+                  <span className="mark-word">
+                    <span className="mark-text">full stack</span>
+                    <span className="mark-sweep" aria-hidden="true">
+                      full stack
+                    </span>
+                  </span>
                 </span>
               </motion.h1>
               <p className="lede">Sites e sistemas, do começo ao fim.</p>
@@ -157,7 +153,7 @@ function Home() {
               <ul className="project-grid">
                 {projects.map((project) => (
                   <li key={project.name}>
-                    <ProjectCard project={project} reduce={reduce} />
+                    <ProjectCard project={project} />
                   </li>
                 ))}
               </ul>
@@ -172,7 +168,8 @@ function Home() {
               <div className="contact-block">
                 <p>Para um projeto ou uma conversa.</p>
                 <a className="email" href={`mailto:${site.email}`}>
-                  {site.email}
+                  {site.email.split('@')[0]}@<wbr />
+                  {site.email.split('@')[1]}
                 </a>
                 <div className="socials">
                   <a href={site.github} target="_blank" rel="noreferrer noopener">

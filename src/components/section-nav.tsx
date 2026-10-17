@@ -4,7 +4,6 @@ import { ThemeToggle } from './theme-provider'
 
 export function SectionNav() {
   const [active, setActive] = useState<(typeof nav)[number]['id']>('topo')
-  const [progress, setProgress] = useState(0)
 
   useEffect(() => {
     const ids = nav.map((item) => item.id)
@@ -12,8 +11,6 @@ export function SectionNav() {
 
     const update = () => {
       frame = 0
-      const max = document.documentElement.scrollHeight - window.innerHeight
-      setProgress(max <= 0 ? 0 : Math.min(1, Math.max(0, window.scrollY / max)))
 
       const atBottom =
         window.innerHeight + window.scrollY >=
@@ -54,23 +51,18 @@ export function SectionNav() {
 
   return (
     <nav className="rail" aria-label="Seções">
-      <div className="rail-group">
-        <div className="rail-track" aria-hidden="true">
-          <span style={{ height: `${progress * 100}%` }} />
-        </div>
-        <ul className="rail-links">
-          {nav.map((item) => (
-            <li key={item.id}>
-              <a
-                href={`/#${item.id}`}
-                aria-current={active === item.id ? 'true' : undefined}
-              >
-                {item.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
+      <ul className="rail-links">
+        {nav.map((item) => (
+          <li key={item.id}>
+            <a
+              href={`/#${item.id}`}
+              aria-current={active === item.id ? 'true' : undefined}
+            >
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
       <ThemeToggle />
     </nav>
   )
