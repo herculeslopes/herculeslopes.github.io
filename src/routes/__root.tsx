@@ -10,6 +10,7 @@ import { site } from '../site'
 import { themeBootScript } from '../theme'
 import { ThemeProvider } from '../components/theme-provider'
 import { SectionNav } from '../components/section-nav'
+import { BackgroundShapes } from '../components/background-shapes'
 
 const title = `${site.name} — Desenvolvedor`
 const description =
@@ -57,6 +58,7 @@ function RootShell({ children }: { children: ReactNode }) {
 function RootComponent() {
   return (
     <ThemeProvider>
+      <BackgroundShapes />
       <a className="skip" href="#conteudo">
         Ir para o conteúdo
       </a>

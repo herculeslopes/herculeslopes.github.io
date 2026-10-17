@@ -9,6 +9,9 @@
   --accent: #98fbcb;
   --mint: #98fbcb;
   --mint-ink: #102117;
+  --shape-mint: #2f443a;
+  --shape-tint: #31463c;
+  --shape-quiet: #1c2420;
   --rail-w: 9rem;
 }
 
@@ -22,6 +25,9 @@
   --accent: #0e6b45;
   --mint: #98fbcb;
   --mint-ink: #102117;
+  --shape-mint: #98fbcb;
+  --shape-tint: #c9f6e2;
+  --shape-quiet: #e6ece7;
 }
 
 *,
@@ -123,6 +129,8 @@ ol {
 }
 
 .shell {
+  position: relative;
+  z-index: 1;
   margin-left: var(--rail-w);
   min-width: 0;
 }
@@ -642,6 +650,185 @@ html[data-curtain='rtl']::view-transition-new(root) {
   }
 }
 
+.bg-shapes {
+  position: fixed;
+  z-index: 0;
+  inset: 0;
+  overflow: clip;
+  pointer-events: none;
+  contain: paint;
+}
+
+.shape {
+  position: absolute;
+  display: block;
+  pointer-events: none;
+  background: var(--shape-tint);
+}
+
+.shape-circle {
+  border-radius: 50%;
+}
+
+.shape-round {
+  border-radius: 1.25rem;
+}
+
+.shape-tri {
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+
+.shape-a {
+  width: 11rem;
+  height: 11rem;
+  top: 6%;
+  right: 8%;
+  background: var(--shape-mint);
+  animation: shape-a 34s ease-in-out infinite alternate;
+}
+
+.shape-b {
+  width: 4.5rem;
+  height: 4.5rem;
+  top: 38%;
+  left: 18%;
+  background: var(--shape-quiet);
+  animation: shape-b 28s ease-in-out infinite alternate;
+  animation-delay: -9s;
+}
+
+.shape-c {
+  width: 7.5rem;
+  height: 6.5rem;
+  right: 14%;
+  bottom: 10%;
+  background: var(--shape-tint);
+  animation: shape-c 40s ease-in-out infinite alternate;
+  animation-delay: -16s;
+}
+
+.shape-d {
+  width: 9rem;
+  height: 4.25rem;
+  top: 18%;
+  left: 28%;
+  background: var(--shape-tint);
+  animation: shape-d 36s ease-in-out infinite alternate;
+  animation-delay: -6s;
+}
+
+.shape-e {
+  width: 3.25rem;
+  height: 3.25rem;
+  left: 42%;
+  bottom: 18%;
+  background: var(--shape-mint);
+  animation: shape-e 30s ease-in-out infinite alternate;
+  animation-delay: -12s;
+}
+
+.shape-f {
+  width: 5.5rem;
+  height: 5.5rem;
+  right: 22%;
+  top: 58%;
+  background: var(--shape-quiet);
+  animation: shape-f 44s ease-in-out infinite alternate;
+  animation-delay: -20s;
+}
+
+@keyframes shape-a {
+  from {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  to {
+    transform: translate3d(-12px, 16px, 0) rotate(10deg);
+  }
+}
+
+@keyframes shape-b {
+  from {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  to {
+    transform: translate3d(10px, -14px, 0) rotate(-8deg);
+  }
+}
+
+@keyframes shape-c {
+  from {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  to {
+    transform: translate3d(-8px, -12px, 0) rotate(14deg);
+  }
+}
+
+@keyframes shape-d {
+  from {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  to {
+    transform: translate3d(14px, 10px, 0) rotate(-6deg);
+  }
+}
+
+@keyframes shape-e {
+  from {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  to {
+    transform: translate3d(-10px, 12px, 0) rotate(18deg);
+  }
+}
+
+@keyframes shape-f {
+  from {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  to {
+    transform: translate3d(8px, -10px, 0) rotate(-12deg);
+  }
+}
+
+@media (max-width: 800px) {
+  .shape-a {
+    width: 6.5rem;
+    height: 6.5rem;
+    right: 4%;
+  }
+
+  .shape-b {
+    width: 2.75rem;
+    height: 2.75rem;
+    left: 28%;
+  }
+
+  .shape-c {
+    width: 4.5rem;
+    height: 4rem;
+    right: 6%;
+  }
+
+  .shape-d {
+    width: 5.5rem;
+    height: 2.6rem;
+    left: 30%;
+  }
+
+  .shape-e {
+    width: 2.25rem;
+    height: 2.25rem;
+    left: 46%;
+  }
+
+  .shape-f {
+    width: 3.25rem;
+    height: 3.25rem;
+    right: 8%;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -657,6 +844,10 @@ html[data-curtain='rtl']::view-transition-new(root) {
   .mark-sweep {
     animation: none;
     clip-path: none;
+  }
+
+  .shape {
+    animation: none;
   }
 
   html[data-curtain]::view-transition-old(root),
