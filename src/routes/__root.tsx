@@ -13,7 +13,7 @@ import { BackgroundShapes } from '../components/background-shapes'
 
 const title = `${site.name} — Desenvolvedor`
 const description =
-  'Portfólio de Hércules Lopes, desenvolvedor full-stack. Texto provisório.'
+  'Portfólio de Hércules Lopes, desenvolvedor.'
 
 export const Route = createRootRoute({
   head: () => ({

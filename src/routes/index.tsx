@@ -2,9 +2,10 @@ import { createFileRoute } from '@tanstack/react-router'
 import { site } from '../site'
 import { Reveal } from '../components/reveal'
 import { ThemeToggle } from '../components/theme-provider'
-import { FrontendIllu } from '../components/frontend-illu'
+import { InterfacesIllu } from '../components/interfaces-illu'
 import { FlowIllu } from '../components/flow-illu'
 import { DatabaseIllu } from '../components/database-illu'
+import { N8nLogo, NextLogo, ReactLogo, SupabaseMark } from '../components/brand-marks'
 
 export const Route = createFileRoute('/')({
   component: Home,
@@ -31,14 +32,6 @@ const projects = [
     meta: 'PortosRio · 2022',
     text: 'Aplicação web em Django e React para a catalogação de imóveis da autoridade portuária.',
     tags: ['Django', 'React'],
-    placeholder: false,
-  },
-  {
-    name: 'Próximo projeto',
-    meta: 'Reservado',
-    text: 'Espaço reservado. O próximo projeto ainda não está definido.',
-    tags: [],
-    placeholder: true,
   },
 ]
 
@@ -48,16 +41,13 @@ function ProjectCard({ project }: { project: (typeof projects)[number] }) {
       <p className="meta">{project.meta}</p>
       <h3>{project.name}</h3>
       <p>{project.text}</p>
-      {project.placeholder ? <p className="note">Texto provisório</p> : null}
-      {project.tags.length > 0 ? (
-        <ul className="tags">
-          {project.tags.map((tag) => (
-            <li className="tag" key={tag}>
-              {tag}
-            </li>
-          ))}
-        </ul>
-      ) : null}
+      <ul className="tags">
+        {project.tags.map((tag) => (
+          <li className="tag" key={tag}>
+            {tag}
+          </li>
+        ))}
+      </ul>
     </article>
   )
 }
@@ -71,7 +61,7 @@ function Portrait() {
           className="portrait-svg"
           viewBox="0 0 280 360"
           role="img"
-          aria-label="Ilustração provisória no lugar da foto"
+          aria-label="Retrato ilustrado"
         >
           <rect className="mint-fill" width="14" height="360" />
           <circle cx="162" cy="124" r="48" fill="currentColor" />
@@ -93,12 +83,9 @@ function Home() {
               <h1 id="hero-title" className="hero-enter">
                 <span className="name">{site.name}</span>
                 <span className="role">
-                  Desenvolvedor{' '}
                   <span className="mark-word">
-                    <span className="mark-text">full stack</span>
-                    <span className="mark-sweep" aria-hidden="true">
-                      full stack
-                    </span>
+                    <span className="mark-text">Desenvolvedor</span>
+                    <span className="mark-sweep" aria-hidden="true">Desenvolvedor</span>
                   </span>
                 </span>
               </h1>
@@ -117,10 +104,9 @@ function Home() {
               <h2 id="sobre-title">Sobre</h2>
               <div className="prose">
                 <p>
-                  Sou desenvolvedor full-stack e atuo em todo o ciclo de vida do
-                  software. Já trabalhei em equipe, com metodologias ágeis e Git.
+                  Desenvolvo sites e sistemas, do começo ao fim. Já trabalhei em
+                  equipe, com metodologias ágeis e Git.
                 </p>
-                <p className="note">Texto provisório, a partir do currículo.</p>
               </div>
             </Reveal>
           </div>
@@ -131,11 +117,10 @@ function Home() {
             <Reveal>
               <h2 id="trabalho-title">O que eu construo</h2>
               <div className="prose">
-                <p>Sites e soluções, do início ao fim — não uma lista de cursos.</p>
+                <p>Sites e soluções, do início ao fim.</p>
                 <p className="stack">
                   Next.js · n8n · Supabase · React · TypeScript · PostgreSQL · Docker
                 </p>
-                <p className="note">Posicionamento provisório.</p>
               </div>
               <ul className="work-list">
                 {offers.map((offer) => (
@@ -149,15 +134,18 @@ function Home() {
           </div>
         </section>
 
-        <section className="section" id="frontend" aria-labelledby="frontend-title">
+        <section className="section" id="interfaces" aria-labelledby="interfaces-title">
           <div className="wrap">
             <Reveal>
-              <h2 id="frontend-title">Frontend</h2>
+              <h2 id="interfaces-title">Interfaces</h2>
               <div className="prose section-lead">
                 <p>A interface ganha forma uma camada de cada vez.</p>
-                <p className="note">Ilustração provisória.</p>
               </div>
-              <FrontendIllu />
+              <div className="brand-row">
+                <ReactLogo />
+                <NextLogo />
+              </div>
+              <InterfacesIllu />
             </Reveal>
           </div>
         </section>
@@ -167,8 +155,10 @@ function Home() {
             <Reveal>
               <h2 id="automacoes-title">Automações</h2>
               <div className="prose section-lead">
-                <p>Um gatilho entra, o n8n encaminha, e cada sistema do outro lado recebe a sua parte.</p>
-                <p className="note">Ilustração provisória.</p>
+                <p>Um gatilho entra, o fluxo segue, e cada sistema recebe a sua parte.</p>
+              </div>
+              <div className="brand-row">
+                <N8nLogo />
               </div>
               <FlowIllu />
             </Reveal>
@@ -180,8 +170,10 @@ function Home() {
             <Reveal>
               <h2 id="dados-title">Banco de dados</h2>
               <div className="prose section-lead">
-                <p>No Supabase, o evento vira uma linha no topo. A tabela mostra só o que cabe.</p>
-                <p className="note">Ilustração provisória.</p>
+                <p>Cada evento vira uma linha no topo. A tabela mostra só o que cabe.</p>
+              </div>
+              <div className="brand-row">
+                <SupabaseMark />
               </div>
               <DatabaseIllu />
             </Reveal>
@@ -230,7 +222,7 @@ function Home() {
       </main>
       <footer className="site-footer">
         <div className="wrap footer-bar">
-          <p>Hércules Lopes · texto provisório</p>
+          <p>Hércules Lopes</p>
           <ThemeToggle />
         </div>
       </footer>

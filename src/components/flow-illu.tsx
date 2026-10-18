@@ -44,7 +44,7 @@ function Stream({
       transition={
         play
           ? {
-              duration: 1.85,
+              duration: 2.6,
               delay,
               repeat: Infinity,
               ease: 'linear',

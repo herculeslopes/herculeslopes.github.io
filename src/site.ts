@@ -1,11 +1,11 @@
 /**
  * Site-wide facts and the future custom domain.
  * Change `url` when herculeslopes.com replaces GitHub Pages.
- * Page copy is provisional — it only restates the CV, and it is marked as such.
+ * Facts restated from the CV and the public profiles.
  */
 export const site = {
   name: 'Hércules Lopes',
-  role: 'Desenvolvedor full stack',
+  role: 'Desenvolvedor',
   locale: 'pt-BR',
   email: 'contato@herculeslopes.com',
   location: 'Rio de Janeiro, RJ',

@@ -61,7 +61,7 @@ function Chip({ type, layoutId }: { type: number; layoutId?: string }) {
       className="db-chip"
       style={{ background: event.color }}
       layoutId={layoutId}
-      transition={{ layout: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } }}
+      transition={{ layout: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } }}
     >
       <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" fill="currentColor">
         {event.icon}
@@ -106,12 +106,12 @@ export function DatabaseIllu() {
           setPhase('idle')
           setMorphKey(null)
           setRows((current) => current.slice(0, VISIBLE))
-          arm(cycle, 680)
-        }, 560)
-      }, 640)
+          arm(cycle, 1100)
+        }, 820)
+      }, 920)
     }
 
-    arm(cycle, 420)
+    arm(cycle, 700)
     return () => {
       dead = true
       window.clearTimeout(timer)
@@ -134,8 +134,8 @@ export function DatabaseIllu() {
             <motion.div
               className="db-event"
               initial={false}
-              animate={{ x: [0, -4, 4, -3, 3, 0] }}
-              transition={{ duration: 0.55, ease: 'easeInOut' }}
+              animate={{ x: [0, -3, 3, -2, 2, 0] }}
+              transition={{ duration: 0.72, ease: [0.45, 0, 0.55, 1] }}
             >
               <Chip type={event.type} layoutId={event.key} />
               <p>{events[event.type].name}</p>
@@ -152,7 +152,7 @@ export function DatabaseIllu() {
                   opacity: index < VISIBLE ? 1 : 0,
                 }}
                 transition={{
-                  duration: play ? 0.45 : 0,
+                  duration: play ? 0.62 : 0,
                   ease: [0.22, 1, 0.36, 1],
                 }}
               >
