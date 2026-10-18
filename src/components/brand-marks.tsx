@@ -155,7 +155,3 @@ export function N8nLogo({ className }: { className?: string }) {
 export function ReactLogo() {
   return <ReactMark className="brand-mark brand-react" label="React" />
 }
-
-export function NextLogo() {
-  return <NextMark className="brand-mark brand-next" label="Next.js" />
-}

@@ -529,12 +529,21 @@ h2 {
   color: #61dafb;
 }
 
-.brand-next {
-  color: var(--text);
-}
-
 .brand-mark-wide {
   height: 3.5rem;
+}
+
+.brand-tile {
+  display: grid;
+  width: 4.75rem;
+  height: 4.75rem;
+  place-items: center;
+  border-radius: 0.35rem;
+  background: #1c1c1c;
+}
+
+.brand-tile .brand-mark {
+  height: 2.75rem;
 }
 
 .not-found {
@@ -707,18 +716,26 @@ html[data-curtain='rtl']::view-transition-new(root) {
     height: 2.7rem;
   }
 
+  .brand-tile {
+    width: 3.8rem;
+    height: 3.8rem;
+  }
+
+  .brand-tile .brand-mark {
+    height: 2.2rem;
+  }
+
   .fe-stage {
     grid-template-columns: 8.15rem minmax(0, 1fr);
     gap: 0.45rem;
     padding: 0.55rem;
   }
 
-  .fe-tool,
-  .fe-tool-row-on {
+  .fe-tool {
     font-size: 0.62rem;
   }
 
-  .db-event,
+  .db-scene,
   .db-table {
     right: 10px;
     left: 10px;
@@ -829,33 +846,286 @@ html[data-curtain='rtl']::view-transition-new(root) {
 
 .db-stage {
   position: relative;
-  height: 348px;
+  height: 430px;
   transform: translateZ(0);
 }
 
-.db-event {
+.db-scene {
   position: absolute;
-  z-index: 3;
-  top: 16px;
+  top: 12px;
   right: 16px;
   left: 16px;
+  height: 118px;
+  overflow: hidden;
+  border-radius: 0.35rem;
+  background: var(--frame);
+}
+
+.db-scene-fill {
+  position: absolute;
+  inset: 0;
+}
+
+.db-wire {
+  position: absolute;
+  top: 136px;
+  left: calc(50% - 2px);
+  width: 4px;
+  height: 42px;
+  background: var(--muted);
+}
+
+.db-traveler {
+  position: absolute;
+  z-index: 5;
+  top: 78px;
+  left: calc(50% - 14px);
+  width: 28px;
+  height: 28px;
+}
+
+.db-flyer-dots {
+  position: absolute;
+  z-index: 5;
+  top: 72px;
+  right: 16px;
+  left: 16px;
+  height: 22px;
+  color: var(--text);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  line-height: 22px;
+  text-align: center;
+}
+
+.db-dots-fly {
+  display: inline-block;
+}
+
+.db-window {
+  position: absolute;
+  top: 8px;
+  right: 11%;
+  left: 11%;
+  height: 102px;
+  overflow: hidden;
+  border-radius: 0.3rem;
+  background: var(--bg);
+  transform-origin: 50% 55%;
+}
+
+.db-win-bar {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  height: 56px;
-  padding: 0 0.9rem;
+  gap: 4px;
+  height: 18px;
+  padding: 0 8px;
+  background: var(--surface);
+}
+
+.db-win-bar i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--muted);
+}
+
+.db-win-body {
+  position: relative;
+  height: 84px;
+}
+
+.db-win-line {
+  position: absolute;
+  top: 14px;
+  left: 12px;
+  width: 42%;
+  height: 8px;
+  border-radius: 0.15rem;
+  background: var(--frame);
+}
+
+.db-win-line-2 {
+  top: 28px;
+  width: 26%;
+}
+
+.db-win-hit {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  width: 40px;
+  height: 16px;
+  border-radius: 0.15rem;
+  background: var(--mint);
+}
+
+.db-cursor-run {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.db-cursor {
+  display: block;
+  width: 12px;
+  height: 16px;
+  color: var(--text);
+}
+
+.db-bug {
+  position: absolute;
+  top: 22px;
+  left: calc(50% - 16px);
+  width: 32px;
+  height: 32px;
+  color: var(--text);
+}
+
+.db-bug svg {
+  display: block;
+  width: 32px;
+  height: 32px;
+}
+
+.db-phone {
+  position: absolute;
+  top: 6px;
+  left: calc(50% - 34px);
+  width: 68px;
+  height: 106px;
+  overflow: hidden;
+  border-radius: 0.85rem;
+  background: var(--bg);
+}
+
+.db-phone-top {
+  height: 14px;
+  background: var(--surface);
+}
+
+.db-bubble {
+  position: absolute;
+  right: 8px;
+  bottom: 18px;
+  width: 36px;
+  height: 16px;
+  border-radius: 0.5rem;
+  background: #98fbcb;
+}
+
+.db-bubble-quiet {
+  top: 26px;
+  bottom: auto;
+  left: 8px;
+  width: 28px;
+  background: var(--frame);
+}
+
+.db-form {
+  position: absolute;
+  top: 16px;
+  right: 15%;
+  left: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  height: 86px;
+  padding: 12px 14px;
+  border-radius: 0.3rem;
+  background: var(--bg);
+}
+
+.db-field {
+  height: 22px;
+  border-radius: 0.2rem;
+  background: var(--surface);
+}
+
+.db-field-pass {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+  background: var(--frame);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.db-pay {
+  position: absolute;
+  top: 18px;
+  left: calc(50% - 70px);
+  width: 140px;
+  height: 82px;
+  overflow: hidden;
   border-radius: 0.35rem;
   background: var(--bg);
 }
 
-.db-event p {
-  font-weight: 700;
-  letter-spacing: -0.02em;
+.db-pay-band {
+  display: block;
+  height: 14px;
+  margin-top: 16px;
+  background: var(--text);
+}
+
+.db-pay-ok {
+  display: block;
+  width: 36px;
+  height: 12px;
+  margin: 14px 0 0 14px;
+  border-radius: 0.15rem;
+  background: #f0c36a;
+}
+
+.db-pay-check {
+  position: absolute;
+  right: 14px;
+  bottom: 12px;
+  width: 16px;
+  height: 16px;
+  border-radius: 0.2rem;
+  background: #98fbcb;
+}
+
+.db-drop {
+  position: absolute;
+  top: 14px;
+  left: calc(50% - 78px);
+  width: 156px;
+  height: 90px;
+  border-radius: 0.35rem;
+  background: var(--bg);
+}
+
+.db-sheet {
+  position: absolute;
+  top: 24px;
+  left: calc(50% - 16px);
+  width: 32px;
+  height: 40px;
+  border-radius: 0.15rem;
+  background: #c9b6f0;
+}
+
+.db-sheet i {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  background: var(--bg);
 }
 
 .db-table {
   position: absolute;
-  top: 92px;
+  top: 178px;
   right: 16px;
   left: 16px;
   height: 240px;
@@ -933,6 +1203,15 @@ html[data-curtain='rtl']::view-transition-new(root) {
   inset: 0;
   border-radius: 0.25rem;
   background: var(--mint);
+  opacity: 0;
+}
+
+.fe-tool[data-on='true'] {
+  color: var(--mint-ink);
+}
+
+.fe-tool[data-on='true'] .fe-tool-bg {
+  opacity: 1;
 }
 
 .fe-tool-row {
@@ -945,13 +1224,6 @@ html[data-curtain='rtl']::view-transition-new(root) {
   min-width: 0;
   padding: 0 0.4rem;
   white-space: nowrap;
-}
-
-.fe-tool-row-on {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  color: var(--mint-ink);
 }
 
 .fe-ico {
@@ -1456,8 +1728,9 @@ html[data-curtain='rtl']::view-transition-new(root) {
   .flow-runner,
   .fe-piece,
   .fe-meter,
-  .db-event,
-  .db-row {
+  .db-row,
+  .db-traveler,
+  .db-scene-fill {
     animation: none !important;
   }
 

@@ -54,25 +54,11 @@ function ToolList({ step }: { step: number }) {
         const Icon = tool.Mark
         return (
           <li key={tool.name} className="fe-tool" data-on={on ? 'true' : 'false'}>
-            <motion.span
-              className="fe-tool-bg"
-              initial={false}
-              animate={{ opacity: on ? 1 : 0 }}
-              transition={enter}
-            />
+            <span className="fe-tool-bg" />
             <span className="fe-tool-row">
               <Icon className="fe-ico" />
               <span>{tool.name}</span>
             </span>
-            <motion.span
-              className="fe-tool-row fe-tool-row-on"
-              initial={false}
-              animate={{ opacity: on ? 1 : 0 }}
-              transition={enter}
-            >
-              <Icon className="fe-ico" />
-              <span>{tool.name}</span>
-            </motion.span>
           </li>
         )
       })}

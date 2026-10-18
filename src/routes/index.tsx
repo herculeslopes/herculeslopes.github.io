@@ -5,7 +5,7 @@ import { ThemeToggle } from '../components/theme-provider'
 import { InterfacesIllu } from '../components/interfaces-illu'
 import { FlowIllu } from '../components/flow-illu'
 import { DatabaseIllu } from '../components/database-illu'
-import { N8nLogo, NextLogo, ReactLogo, SupabaseMark } from '../components/brand-marks'
+import { N8nLogo, ReactLogo, SupabaseMark } from '../components/brand-marks'
 
 export const Route = createFileRoute('/')({
   component: Home,
@@ -143,7 +143,6 @@ function Home() {
               </div>
               <div className="brand-row">
                 <ReactLogo />
-                <NextLogo />
               </div>
               <InterfacesIllu />
             </Reveal>
@@ -173,7 +172,9 @@ function Home() {
                 <p>Cada evento vira uma linha no topo. A tabela mostra só o que cabe.</p>
               </div>
               <div className="brand-row">
-                <SupabaseMark />
+                <span className="brand-tile">
+                  <SupabaseMark />
+                </span>
               </div>
               <DatabaseIllu />
             </Reveal>
