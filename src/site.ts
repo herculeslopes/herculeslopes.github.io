@@ -14,11 +14,3 @@ export const site = {
   github: 'https://github.com/herculeslopes',
   linkedin: 'https://www.linkedin.com/in/herculeslopes',
 } as const
-
-export const nav = [
-  { id: 'topo', label: 'Início' },
-  { id: 'sobre', label: 'Sobre' },
-  { id: 'trabalho', label: 'Trabalho' },
-  { id: 'projetos', label: 'Projetos' },
-  { id: 'contato', label: 'Contato' },
-] as const

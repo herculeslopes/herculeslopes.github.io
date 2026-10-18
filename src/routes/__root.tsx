@@ -9,7 +9,6 @@ import appCss from '../styles.css?url'
 import { site } from '../site'
 import { themeBootScript } from '../theme'
 import { ThemeProvider } from '../components/theme-provider'
-import { SectionNav } from '../components/section-nav'
 import { BackgroundShapes } from '../components/background-shapes'
 
 const title = `${site.name} — Desenvolvedor`
@@ -31,7 +30,7 @@ export const Route = createRootRoute({
     ],
     links: [
       { rel: 'stylesheet', href: appCss },
-      { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' },
+      { rel: 'icon', href: './favicon.svg', type: 'image/svg+xml' },
       { rel: 'canonical', href: site.url },
     ],
   }),
@@ -62,7 +61,6 @@ function RootComponent() {
       <a className="skip" href="#conteudo">
         Ir para o conteúdo
       </a>
-      <SectionNav />
       <div className="shell">
         <Outlet />
       </div>
@@ -75,7 +73,7 @@ function NotFound() {
     <main id="conteudo" className="wrap not-found">
       <h1>Página não encontrada</h1>
       <p>Esse endereço não faz parte do portfólio.</p>
-      <a href="/">Voltar ao início</a>
+      <a href="./">Voltar ao início</a>
     </main>
   )
 }
