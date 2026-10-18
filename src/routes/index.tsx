@@ -1,5 +1,4 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { motion, useReducedMotion } from 'motion/react'
 import { site } from '../site'
 import { Reveal } from '../components/reveal'
 
@@ -61,36 +60,33 @@ function ProjectCard({ project }: { project: (typeof projects)[number] }) {
 
 function Portrait() {
   return (
-    <div className="portrait">
-      <svg
-        className="portrait-svg"
-        viewBox="0 0 280 360"
-        role="img"
-        aria-label="Ilustração provisória no lugar da foto"
-      >
-        <rect className="mint-fill" width="14" height="360" />
-        <circle cx="162" cy="124" r="48" fill="currentColor" />
-        <path d="M68 360h176l-36-132H104L68 360z" fill="currentColor" />
-      </svg>
+    <div className="portrait-slot">
+      <div className="portrait-offset" aria-hidden="true" />
+      <div className="portrait">
+        <svg
+          className="portrait-svg"
+          viewBox="0 0 280 360"
+          role="img"
+          aria-label="Ilustração provisória no lugar da foto"
+        >
+          <rect className="mint-fill" width="14" height="360" />
+          <circle cx="162" cy="124" r="48" fill="currentColor" />
+          <path d="M68 360h176l-36-132H104L68 360z" fill="currentColor" />
+        </svg>
+        <span className="portrait-cover" aria-hidden="true" />
+      </div>
     </div>
   )
 }
 
 function Home() {
-  const reduce = useReducedMotion()
-
   return (
     <>
       <main id="conteudo">
         <section className="hero" id="topo" aria-labelledby="hero-title">
           <div className="wrap hero-grid">
             <div className="hero-copy">
-              <motion.h1
-                id="hero-title"
-                initial={reduce ? false : { opacity: 0, y: 8 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: reduce ? 0 : 0.35, ease: 'easeOut' }}
-              >
+              <h1 id="hero-title" className="hero-enter">
                 <span className="name">{site.name}</span>
                 <span className="role">
                   Desenvolvedor{' '}
@@ -101,9 +97,9 @@ function Home() {
                     </span>
                   </span>
                 </span>
-              </motion.h1>
-              <p className="lede">Sites e sistemas, do começo ao fim.</p>
-              <p className="hero-meta">
+              </h1>
+              <p className="lede hero-enter">Sites e sistemas, do começo ao fim.</p>
+              <p className="hero-meta hero-enter">
                 <span>{site.location}</span>
               </p>
             </div>
